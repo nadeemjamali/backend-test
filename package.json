@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Nadeem Jamali",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.2",
+    "express": "^4.16.3",
+    "express-validator": "^5.2.0",
+    "helmet": "^3.12.1",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2"
+  }
+}

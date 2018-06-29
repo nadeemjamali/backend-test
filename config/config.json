@@ -1,0 +1,7 @@
+{
+    "development":{
+        "PORT": 3000,
+        "JWT_SECRET": "59d5d0a9owqieurkgas12k4245xf356h67wa8e9yd6tvkqbhskuenkzfgoewiurtyaf01bb8d6c19ccf4a",
+        "RANDOM_SEED": "ae1af78fd5d24f7b0d6d5b0e463e9529038268c58ee15a646de561364b29b971"
+    }
+}

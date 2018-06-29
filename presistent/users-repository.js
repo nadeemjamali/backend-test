@@ -4,7 +4,7 @@ const {join} = require('path');
 class UsersRepository {
 
     constructor(){
-        this._dataFilePath = 'users.json';
+        this._dataFilePath = './users.json';
     }
 
     /**
@@ -37,7 +37,7 @@ class UsersRepository {
      */
     async _getUsersDataAsync(){
         return new Promise((resolve, reject) => {
-            fs.readFile(join(__dirname, './users.json'), (err, data) => {
+            fs.readFile(join(__dirname, this._dataFilePath), (err, data) => {
                 if (err) {
                     reject(err);
                 }
@@ -49,7 +49,7 @@ class UsersRepository {
     async _saveAllUsers(usersArray){
         return new Promise((resolve, reject) => {
             const data = JSON.stringify(usersArray);
-            fs.writeFile(this._dataFilePath, data, (err) => {
+            fs.writeFile(join(__dirname, this._dataFilePath), data, (err) => {
                 if (err) {
                     reject(err);
                 }

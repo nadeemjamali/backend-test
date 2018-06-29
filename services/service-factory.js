@@ -1,10 +1,20 @@
 const {
+    repoFactory
+} = require('../presistent/repo-factory');
+
+const {
+    Encryptor
+} = require('../utils/encryptor');
+
+const {
     UsersService
 } = require('./users-service');
 
+
 class ServiceFactory {
     constructor() {
-        this._usersService = new UsersService();
+        const encryptor = new Encryptor();
+        this._usersService = new UsersService(encryptor, repoFactory.getUsersRepo());
     }
 
     /**
